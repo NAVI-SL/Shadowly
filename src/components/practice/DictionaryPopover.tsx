@@ -72,7 +72,6 @@ export function DictionaryPopover({ word, children }: DictionaryPopoverProps) {
       <PopoverContent 
         className="w-80 p-0 shadow-lg border-border rounded-xl overflow-hidden z-50" 
         sideOffset={5}
-        onOpenAutoFocus={(e) => e.preventDefault()} // Prevent stealing focus which might interrupt other flows
       >
         {isLoading ? (
           <div className="p-6 flex flex-col items-center justify-center text-muted-foreground space-y-3">
