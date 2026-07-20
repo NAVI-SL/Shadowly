@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Play, Square, Loader2, Mic } from "lucide-react";
+import { Play, Square, Loader2 } from "lucide-react";
 
 interface RecordingComparisonProps {
   isRecordingMode: boolean;
@@ -36,7 +36,7 @@ export function RecordingComparison({ isRecordingMode, onStopRecording }: Record
     if (isRecordingMode && !isRecording && !hasRecorded) {
       startRecording();
     }
-  }, [isRecordingMode]);
+  }, [isRecordingMode, isRecording, hasRecorded]);
 
   const startRecording = () => {
     setIsRecording(true);

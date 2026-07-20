@@ -26,7 +26,7 @@ export default function SettingsPage() {
               min={5} 
               max={60} 
               step={5}
-              onValueChange={(val: any) => updateSettings({ dailyTargetMinutes: val[0] })}
+              onValueChange={(val: number[]) => updateSettings({ dailyTargetMinutes: val[0] })}
               className="flex-1"
             />
             <span className="w-16 text-right font-medium text-primary">{settings.dailyTargetMinutes} min</span>

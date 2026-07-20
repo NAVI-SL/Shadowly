@@ -1,5 +1,5 @@
 import { Search, Languages, BookmarkPlus, Play } from "lucide-react";
-import { Input } from "@/components/ui/input";
+
 import { TranscriptLine } from "@/lib/mockData";
 import { useAppStore } from "@/store/useAppStore";
 import { useRef, useEffect } from "react";

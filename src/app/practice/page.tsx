@@ -7,7 +7,7 @@ import { CurrentSentence } from "@/components/practice/CurrentSentence";
 import { RecordingComparison } from "@/components/practice/RecordingComparison";
 import { SessionProgress } from "@/components/practice/SessionProgress";
 import { InteractiveTranscript } from "@/components/practice/InteractiveTranscript";
-import { MOCK_TRANSCRIPT, MOCK_VIDEO_ID, TranscriptLine } from "@/lib/mockData";
+import { MOCK_TRANSCRIPT, TranscriptLine } from "@/lib/mockData";
 import { useAppStore } from "@/store/useAppStore";
 import { getYouTubeTranscript } from "@/app/actions/transcript";
 
@@ -80,10 +80,16 @@ export default function PracticePage() {
   const handleTimeUpdate = (time: number) => {
     setCurrentTime(time);
     if (isRecordingMode) return; // Don't auto-scroll while recording
-    // Find current sentence
-    const current = transcript.find(
-      (line) => time >= line.start && time < line.end
-    );
+    // Find the most recent sentence that has started
+    let currentIndex = -1;
+    for (let i = 0; i < transcript.length; i++) {
+      if (time >= transcript[i].start) {
+        currentIndex = i;
+      } else {
+        break; // Since the transcript is ordered by start time
+      }
+    }
+    const current = currentIndex >= 0 ? transcript[currentIndex] : undefined;
     if (current && current.id !== activeSentenceId) {
       setActiveSentenceId(current.id);
     }

@@ -1,6 +1,6 @@
 "use client";
 
-import { PlayCircle, Mic, Activity, Headphones } from "lucide-react";
+import { PlayCircle, Activity, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -43,7 +43,7 @@ export default function Home() {
                 <PlayCircle className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">1. Paste a Video</h3>
-              <p className="text-muted-foreground">Use any YouTube video URL. We'll generate an interactive transcript instantly.</p>
+              <p className="text-muted-foreground">Use any YouTube video URL. We&apos;ll generate an interactive transcript instantly.</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">

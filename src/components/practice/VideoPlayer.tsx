@@ -55,7 +55,7 @@ export const VideoPlayer = forwardRef<VideoPlayerRef, VideoPlayerProps>(({ video
       try {
         const time = await p.getCurrentTime();
         onTimeUpdate(time);
-      } catch (e) {}
+      } catch {}
     }, 200); // 5 times a second
   };
 

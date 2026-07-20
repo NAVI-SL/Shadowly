@@ -79,12 +79,12 @@ export function DictionaryPopover({ word, children }: DictionaryPopoverProps) {
         {isLoading ? (
           <div className="p-6 flex flex-col items-center justify-center text-muted-foreground space-y-3">
             <Loader2 className="w-6 h-6 animate-spin text-primary" />
-            <p className="text-sm">Looking up "{cleanWord}"...</p>
+            <p className="text-sm">Looking up &quot;{cleanWord}&quot;...</p>
           </div>
         ) : error || !data ? (
           <div className="p-6 text-center">
             <BookOpen className="w-8 h-8 text-border mx-auto mb-2" />
-            <p className="text-muted-foreground text-sm">No definition found for "{cleanWord}".</p>
+            <p className="text-muted-foreground text-sm">No definition found for &quot;{cleanWord}&quot;.</p>
           </div>
         ) : (
           <div>
@@ -120,7 +120,7 @@ export function DictionaryPopover({ word, children }: DictionaryPopoverProps) {
                         <p className="leading-relaxed">{def.definition}</p>
                         {def.example && (
                           <p className="text-muted-foreground italic mt-1 border-l-2 border-primary pl-2">
-                            "{def.example}"
+                            &quot;{def.example}&quot;
                           </p>
                         )}
                       </li>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bell, Settings, PlayCircle } from "lucide-react";
+import { Bell, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { ModeToggle } from "@/components/layout/mode-toggle";

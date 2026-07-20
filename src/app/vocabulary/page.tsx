@@ -24,7 +24,7 @@ export default function VocabularyPage() {
       <div className="grid md:grid-cols-2 gap-6">
         {vocabulary.length === 0 ? (
           <div className="col-span-2 text-center py-12 text-muted-foreground">
-            <p>You haven't saved any vocabulary yet.</p>
+            <p>You haven&apos;t saved any vocabulary yet.</p>
             <p className="mt-2">Practice with videos and click the bookmark icon to save words.</p>
           </div>
         ) : (
@@ -39,7 +39,7 @@ export default function VocabularyPage() {
                 </div>
                 <p className="text-muted-foreground mb-4 text-sm">{item.definition}</p>
                 <div className="bg-muted p-3 rounded-lg text-sm text-foreground mb-4 italic">
-                  "{item.exampleSentence}"
+                  &quot;{item.exampleSentence}&quot;
                 </div>
               </div>
               <div className="flex items-center justify-between border-t border-border pt-4 mt-2">
