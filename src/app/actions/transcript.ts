@@ -1,4 +1,5 @@
 "use server";
+export const runtime = 'edge';
 
 import { YoutubeTranscript } from "youtube-transcript";
 import { TranscriptLine } from "@/lib/mockData"; // reuse the type
