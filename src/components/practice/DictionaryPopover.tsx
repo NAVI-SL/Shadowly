@@ -66,10 +66,8 @@ export function DictionaryPopover({ word, children }: DictionaryPopoverProps) {
 
   return (
     <Popover open={isOpen} onOpenChange={setIsOpen}>
-      <PopoverTrigger asChild>
-        <button className="focus:outline-none hover:bg-primary/10 transition-colors rounded">
-          {children}
-        </button>
+      <PopoverTrigger className="focus:outline-none hover:bg-primary/10 transition-colors rounded">
+        {children}
       </PopoverTrigger>
       <PopoverContent 
         className="w-80 p-0 shadow-lg border-border rounded-xl overflow-hidden z-50" 
